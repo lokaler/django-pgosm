@@ -96,7 +96,7 @@ class Point(models.Model):
 class Polygon(models.Model):
   osm_id = models.IntegerField(primary_key=True)
   name = models.TextField(null=True, db_index=True)
-  admin_level = models.IntegerField(null=True, db_index=True)
+  admin_level = models.TextField(null=True, db_index=True)
   boundary = models.TextField(null=True, db_index=True)
   way  = models.PolygonField(null=True, srid=900913)
 
